@@ -1,0 +1,201 @@
+
+/* Base styling */
+body {
+  margin: 0;
+  font-family: "Copperplate", "Papyrus", fantasy;
+  transition: background 0.5s, color 0.5s;
+  background:no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  background-position: center;
+  background-repeat: no-repeat;
+  scroll-behavior: smooth;
+}
+
+body.light-mode {
+  background-image: url('BgPics/light_sunset.jpg');
+  color: #000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-image: url('BgPics/dark_stars.jpg'); /* <-- Replace with your dark image */
+  color: #fff;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Scroll-down triangle */
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, border-top-color 0.3s ease;
+}
+
+.scroll-down:hover {
+  transform: translateX(-50%) translateY(5px);
+  border-top-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8.5%;
+  background: rgba(0, 0, 0, 0); 
+  /* subtle translucent overlay */
+  z-index: 2;
+  text-decoration: none;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-top-color 0.3s ease;            
+  }
+
+.scroll-bar:hover {
+  background: rgba(0, 0, 0, 0.2);
+  }
+
+.theme-toggle {
+  
+  transition: transform 0.3s ease;
+
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  }
+  
+.theme-toggle:hover {
+    transform: scale(1.1);
+  }
+
+.circle-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+/* Light mode overlay */
+body.light-mode .offcanvas-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Dark mode overlay */
+body.dark-mode .offcanvas-menu {
+  background-color: rgba(34, 34, 34, 1.0);
+}
+
+/* Off-canvas style overlay */
+.offcanvas-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.offcanvas-menu.show {
+  display: flex;
+}
+
+body.light-mode .offcanvas-menu a {
+  font-size: 1.8rem;
+  margin: 1rem;
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+}
+
+body.dark-mode .offcanvas-menu a {
+  font-size: 1.8rem;
+  margin: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* NavBar Style */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.15) !important;
+  z-index: 10000;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: rgba(255, 251, 234, 0.85);
+}
+
+@media (min-width: 992px) {
+  .offcanvas-menu {
+    display: none !important;
+  }
+}
+
+.github-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/25/25231.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.linkedin-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/174/174857.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.instagram-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/174/174855.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+.email-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/25/25236.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+
+
+
+
+
+
